@@ -1,8 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Lyric from "./Lyric";
-import Results from "./Results";
-import { browserHistory, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 export default function Game() {
@@ -35,10 +34,6 @@ export default function Game() {
   const [inputValue, setInputValue] = useState("");
   const [score, setScore] = useState(0);
   const [counter, setCounter] = useState(10);
-  // const [timeOver, setTimeOver] = useState(false);
-
-
-  // myStorage = window.localStorage;
 
   localStorage.setItem("score", JSON.stringify(score));
 
@@ -46,8 +41,6 @@ const history = useHistory();
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     if (counter === 0) {
-      window.location.href = "/results";
-      // return  <Redirect to='/results'  />      
       history.push("/results");
     }
   }, [counter]);
@@ -55,8 +48,6 @@ const history = useHistory();
   useEffect(() => {
     console.log(songsArr[randomNum].split("%20").join(" "));
     randomChoice();
-    // setTimeOver(false);
-    // setCounter(60);
   }, [score]);
 
   const randomChoice = () => {
@@ -83,7 +74,6 @@ const history = useHistory();
       if (
         inputValue == songsArr[randomNum].split("%20").join(" ").toLowerCase()
       ) {
-        // setScore(appScore + 1);
         setScore((score) => score + 1);
         localStorage.setItem("score", JSON.stringify(score + 1));
         setInputValue("");
