@@ -10,20 +10,12 @@ const Lyric = ({songName, artistName}) => {
   const [lyrics, setLyrics] = useState(null);
 
   const getData = async () => {
-    // setLoading(true);
-    // const { data } = await axios.get(
-    //   `https://intense-mesa-62220.herokuapp.com/https://api.lyrics.ovh/v1/${artistName}&song=${songName}`
-    // );
-    // var xml = new XMLParser().parseFromString(data); 
-    // const data1 = xml.children[9].value
-    // setLyrics(data1);
-    // setLoading(false);
     setLoading(true);
     const { data } = await axios.get(
       `https://intense-mesa-62220.herokuapp.com/http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect?artist=${artistName}&song=${songName}`
     );
     var xml = new XMLParser().parseFromString(data); 
-    const data1 = xml.children[9].value
+    const data1 = xml.children[9].value.slice(0,700)+'...☞'
     setLyrics(data1);
     setLoading(false);
   }

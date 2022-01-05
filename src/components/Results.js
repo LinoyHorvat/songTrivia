@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Results = ({score}) => {
-  score = 1;
+const Results = ({appScore}) => {
   const text = () => {
-    if (score >= 3) return <h1> great job 😀 you've earned {score} points</h1>
-    else return <h1 style={{color: 'red'}}>You suck 😡 you've earned {score} points</h1>
-  }
+    if (appScore >= 1) return <h1> great job 😀 you've earned {appScore} points</h1>
+    else return <h1 style={{color: 'red'}}>You suck 😡 you've earned {appScore} points</h1>
+  };
   return (
     <div className="results">
-      {text()}
-    </div>
+    {text()}
+    {console.log(appScore)}
+    </div> 
   )
-}
+};
 
-export default Results
+export default Results;
+
+

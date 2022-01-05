@@ -63,7 +63,7 @@ h2 {
 }
 
 .link, button{
-  border-radius: 20%;
+  border-radius: 10px;
   padding: 0.2em;
   background-color: rgb(0, 217, 255);
   text-transform: uppercase;
