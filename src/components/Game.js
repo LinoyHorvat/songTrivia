@@ -5,7 +5,7 @@ import Results from "./Results";
 import { browserHistory, Redirect, useHistory } from "react-router-dom";
 
 
-export default function Game({setAppScore, appScore}) {
+export default function Game() {
   const songsArr = [
     "we%20will%20rock%20you",
     "frozen",
@@ -33,9 +33,15 @@ export default function Game({setAppScore, appScore}) {
   let random = Math.floor(songsArr.length * Math.random());
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState("");
-  // const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0);
   const [counter, setCounter] = useState(10);
   // const [timeOver, setTimeOver] = useState(false);
+
+
+  // myStorage = window.localStorage;
+
+  localStorage.setItem("score", JSON.stringify(score));
+
 const history = useHistory();
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
@@ -51,7 +57,7 @@ const history = useHistory();
     randomChoice();
     // setTimeOver(false);
     // setCounter(60);
-  }, [appScore]);
+  }, [score]);
 
   const randomChoice = () => {
     setRandomNum(random);
@@ -78,7 +84,8 @@ const history = useHistory();
         inputValue == songsArr[randomNum].split("%20").join(" ").toLowerCase()
       ) {
         // setScore(appScore + 1);
-        setAppScore((appScore) => appScore + 1);
+        setScore((score) => score + 1);
+        localStorage.setItem("score", JSON.stringify(score + 1));
         setInputValue("");
       }
     }
@@ -94,7 +101,7 @@ const history = useHistory();
         onChange={(event) => handelInputChange(event.target.value)}
         onKeyDown={(event) => handleKeyDown(event)}
       />
-      <button className="score">score: {appScore}</button>
+      <button className="score">score: {score}</button>
       {createLyrics()}
       <button onClick={handelBackBtn}>Back</button>
     </div>

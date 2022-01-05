@@ -8,7 +8,6 @@ export default function Navbar() {
       <Link to="/" className="navbar-link"> Home </Link>
       <Link to="/rules" className="navbar-link"> Rules </Link>
       <Link to="/game" className="navbar-link"> Game </Link>
-      <Link to="/results" className="navbar-link"> results </Link>
     </div>
   );
 }
