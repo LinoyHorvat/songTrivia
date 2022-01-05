@@ -83,11 +83,15 @@ h2 {
 }
 
 .lyrics{
+  font-size: 2em;
   background-color:rgba(255,255,255,0.7);
   border: 1px solid purple;
   padding: 0 2em 0 2em;
   margin: 0 2em 0 2em;
   letter-spacing: 2px;
+}
+.input{ 
+  font-size: 2em;
 }
 
 @media only screen and (max-width: 650px) {
@@ -102,5 +106,14 @@ h2 {
   }
   h2 { 
     font-size: 2em;
+  }
+  button{
+    font-size: 1em;
+  }
+  .lyrics{ 
+    font-size: 1em;
+  }
+  .input{ 
+    font-size: 1em;
   }
 }

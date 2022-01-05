@@ -85,6 +85,7 @@ const history = useHistory();
     <div className="game">
       <div className="countdown">Countdown: {counter}</div>
       <input
+      className="input"
         placeholder="Guess The Song Name"
         type="text"
         value={inputValue}
