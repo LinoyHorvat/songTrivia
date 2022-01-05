@@ -1,16 +1,27 @@
-import React from 'react'
 import "./App.css";
-// import ShoeCard from "./components/ShoeCard";
-// import Input from "./components/Input";
-// import shoesApi from "./api";
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Game from "./components/Game";
+import HomePage from "./components/HomePage";
+import Rules from "./components/Rules";
+import Navbar from "./components/Navbar";
 
-
-const App = () => {
+export default function App() {
   return (
     <div>
-      hello world
+    
+      <BrowserRouter>
+      <Navbar />
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/rules" exact component={Rules} />
+            <Route path="/Game" exact component={Game} />
+          </Switch>
+      </BrowserRouter>
     </div>
-  )
+  );
 }
+// <Route path="/Game" exact component={Game} />
 
-export default App
+// <Route path="/products" exact component={Products} />
+// <Route path="/cart" exact component={Cart} />

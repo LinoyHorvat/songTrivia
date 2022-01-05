@@ -11,13 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.shoeCard{
-  border: 0.5px solid black;
+
+
+.rules, .homepage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 0.5em;
   margin: 0.5em;
 }
+ul ol {
+  list-style: circle;
+}
 
-button{
-  margin: 0.2em;
-  width: 100px;
+.link{
+  border: 1px solid black;
+  color: blue;
+}
+
+button {
 }
