@@ -94,6 +94,16 @@ h2 {
   font-size: 2em;
   font-family: "dpcomic";
 }
+.submit{
+  background-color: rgb(13, 255, 0);
+}
+
+.input-container{
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+}
+
 
 @media only screen and (max-width: 650px) {
   .navbar-link{ 

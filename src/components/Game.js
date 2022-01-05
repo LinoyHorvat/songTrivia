@@ -36,17 +36,15 @@ export default function Game() {
   const [counter, setCounter] = useState(10);
   localStorage.setItem("score", JSON.stringify(score));
   const history = useHistory();
-  const [style, setStyle] = useState({color: 'rgba(47, 247, 7, 0.886)'})
-
-
+  const [style, setStyle] = useState({ color: "rgba(47, 247, 7, 0.886)" });
 
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     if (counter <= 5) {
-      setStyle({color: "red"}) 
+      setStyle({ color: "red" });
     }
     if (counter === 0) {
-      history.push("/results");
+      // history.push("/results");
     }
   }, [counter]);
 
@@ -84,18 +82,34 @@ export default function Game() {
       }
     }
   };
+  const handelSubmit = () => {
+    if (
+      inputValue == songsArr[randomNum].split("%20").join(" ").toLowerCase()
+    ) {
+      setScore((score) => score + 1);
+      localStorage.setItem("score", JSON.stringify(score + 1));
+      setInputValue("");
+    }
+  };
 
   return (
     <div className="game">
-      <div className="countdown" style={style}>Countdown: {counter}</div>
-      <input
-        className="input"
-        placeholder="Guess The Song Name"
-        type="text"
-        value={inputValue}
-        onChange={(event) => handelInputChange(event.target.value)}
-        onKeyDown={(event) => handleKeyDown(event)}
-      />
+      <div className="countdown" style={style}>
+        Countdown: {counter}
+      </div>
+      <div className="input-container">
+        <input
+          className="input"
+          placeholder="Guess The Song Name"
+          type="text"
+          value={inputValue}
+          onChange={(event) => handelInputChange(event.target.value)}
+          onKeyDown={(event) => handleKeyDown(event)}
+        />
+        <button className="submit" onClick={handelSubmit}>
+          Submit
+        </button>
+      </div>
       <button className="score">score: {score}</button>
       {createLyrics()}
       <button onClick={handelBackBtn}>Back</button>
