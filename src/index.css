@@ -35,14 +35,16 @@ code {
   text-align: center;
 }
 ul {
-  align-items: right;
+  /* display: flex;
+  flex-direction: column;
+  padding: 10px; */
 }
 .ol {
   color: rgb(123, 27, 123);
   font-size: 3.2em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   letter-spacing: 3px;
-  align-items: right;
+  /* align-items: right; */
   /* text-align: center; */
 }
 h1, h2{ 

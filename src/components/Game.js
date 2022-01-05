@@ -30,6 +30,7 @@ export default function Game() {
     "the%20beatles",
   ];
   let random = Math.floor(songsArr.length * Math.random());
+  // let random = 10;
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState("");
   const [score, setScore] = useState(0);
