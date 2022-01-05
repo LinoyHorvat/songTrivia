@@ -33,7 +33,7 @@ export default function Game() {
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState("");
   const [score, setScore] = useState(0);
-  const [counter, setCounter] = useState(10);
+  const [counter, setCounter] = useState(60);
   localStorage.setItem("score", JSON.stringify(score));
   const history = useHistory();
   const [style, setStyle] = useState({ color: "rgba(47, 247, 7, 0.886)" });
