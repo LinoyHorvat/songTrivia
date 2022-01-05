@@ -44,7 +44,7 @@ export default function Game() {
       setStyle({ color: "red" });
     }
     if (counter === 0) {
-      // history.push("/results");
+      history.push("/results");
     }
   }, [counter]);
 
