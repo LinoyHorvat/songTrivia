@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="navbar">
       <Link to="/" className="navbar-link"> Home </Link>
       <Link to="/rules" className="navbar-link"> Rules </Link>
-      <Link to="/game" className="navbar-link"> Game </Link>
+      <Link to="/game" className="navbar-link">Start Game </Link>
     </div>
   );
 }
