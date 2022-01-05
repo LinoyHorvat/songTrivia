@@ -41,7 +41,7 @@ const history = useHistory();
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     if (counter === 0) {
-      history.push("/results");
+      // history.push("/results");
     }
   }, [counter]);
 

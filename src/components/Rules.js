@@ -8,16 +8,15 @@ const Rules = () => {
       <h1>Rules:</h1>
       <ul className="ul">
         <ol className="ol">
-        ✔︎ Your goal is to guess the song title from the lyrics.
+        ✔︎ Your goal is to guess the song title from its lyrics.
         </ol>
         <ol className="ol">
-        ● The lyrics will appear for 60 seconds.
+        → The lyrics will appear for 60 seconds.
         </ol>
         <ol className="ol">
-        ● Your goal is to submit as much songs
-        names as you can by that time.
+        Your goal is to submit as many songs names as you can by that time.
         </ol>
-        <ol className="ol">● If you'll succeed you'll get 1 point.</ol>
+        <ol className="ol">● For each song name that you guess correctly, you'll earn 1 point..</ol>
       </ul>
       <div>
         <Link to={`/game`} className="link">

@@ -19,13 +19,11 @@ code {
 .navbar-link{ 
   text-decoration: none;
   color: purple;
-  font-size: 1em;
+  font-size: 2em;
 }
-
 
 .rules, .homepage, .game, .results{
   background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.7)), url("../src/img/pop-culture-trivia-pop-art-collage.jpeg");
-  /* opacity: 30%; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -39,27 +37,27 @@ code {
 .ol {
   list-style: circle;
   color: rgb(123, 27, 123);
-  font-size: 2em;
+  font-size: 3.2em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   letter-spacing: 3px;
   align-items: center;
   text-align: center;
-
 }
 h1, h2{ 
   padding: 0.1em;
   color: rgba(47, 247, 7, 0.886);
   font-family: "dpcomic";
-  font-size: 5em;
+  font-size: 7em;
   letter-spacing: 7px;
   text-transform: uppercase;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
 
 }
 h2 { 
   padding: 1em;
   color: purple;
-  font-size: 2em;
+  font-size: 4em;
 
 }
 
@@ -90,4 +88,19 @@ h2 {
   padding: 0 2em 0 2em;
   margin: 0 2em 0 2em;
   letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar-link{ 
+    font-size: 1em;
+  }
+  .ol {
+    font-size: 2em;
+  }
+  h1, h2{ 
+    font-size: 5em;
+  }
+  h2 { 
+    font-size: 2em;
+  }
 }
