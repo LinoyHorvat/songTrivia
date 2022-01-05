@@ -11,8 +11,11 @@ const Rules = () => {
         ✔︎ Your goal is to guess the song title from the lyrics.
         </ol>
         <ol className="ol">
-        ● The lyrics will appear for 30 seconds. You'll need to submit the song
-          name in the input by that time.
+        ● The lyrics will appear for 60 seconds.
+        </ol>
+        <ol className="ol">
+        ● Your goal is to submit as much songs
+        names as you can by that time.
         </ol>
         <ol className="ol">● If you'll succeed you'll get 1 point.</ol>
       </ul>

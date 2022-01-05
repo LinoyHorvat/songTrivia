@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 import Results from "./components/Results";
 import { useState, useEffect } from "react";
 
-
 export default function App() {
   const [appScore, setAppScore] = useState(0);
   // useEffect(() => {
@@ -17,20 +16,19 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar />
-          <Switch>
+        <Navbar />
+        <Switch>
           {console.log(`from App ${appScore}`)}
-            <Route path="/" exact component={HomePage} />
-            <Route path="/rules" exact component={Rules} />
-            <Route path="/Game"><Game setAppScore={setAppScore} appScore = {appScore}/>
-            </Route>
-            <Route path="/results"><Results appScore={appScore} /></Route>
-          </Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/rules" exact component={Rules} />
+          <Route path="/Game">
+            <Game setAppScore={setAppScore} appScore={appScore} />
+          </Route>
+          <Route path="/results">
+            <Results appScore={appScore} />
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );
 }
-// <Route path="/Game" exact component={Game} />
-
-// <Route path="/products" exact component={Products} />
-// <Route path="/cart" exact component={Cart} />

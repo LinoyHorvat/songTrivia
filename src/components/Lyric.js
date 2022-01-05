@@ -8,6 +8,7 @@ import XMLParser from 'react-xml-parser';
 const Lyric = ({songName, artistName}) => {
   const [isLoading, setLoading] = useState(false);
   const [lyrics, setLyrics] = useState(null);
+  const maxLength = 700;
 
   const getData = async () => {
     setLoading(true);
@@ -15,8 +16,13 @@ const Lyric = ({songName, artistName}) => {
       `https://intense-mesa-62220.herokuapp.com/http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect?artist=${artistName}&song=${songName}`
     );
     var xml = new XMLParser().parseFromString(data); 
-    const data1 = xml.children[9].value.slice(0,700)+'...☞'
-    setLyrics(data1);
+    const data1 = xml.children[9].value
+    if (data1.length > maxLength) {
+      let data2 = data1.slice(0,maxLength)+'...☞'
+      setLyrics(data2);
+
+    }
+    else setLyrics(data1);
     setLoading(false);
   }
 
@@ -27,9 +33,10 @@ const Lyric = ({songName, artistName}) => {
   return (
     <div className="lyrics">
     <div>{songName.split('%20').join(' ').toLowerCase()}</div>
-      {isLoading ? <div>loading...</div> : <div>{lyrics}</div>}
+    {isLoading ? <div>loading...</div> : <div>{lyrics}</div>}
     </div>
   )
 }
+
 
 export default Lyric

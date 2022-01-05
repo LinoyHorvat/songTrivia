@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Lyric from "./Lyric";
 import Results from "./Results";
-import { browserHistory, Redirect } from "react-router-dom";
+import { browserHistory, Redirect, useHistory } from "react-router-dom";
 
 
 export default function Game({setAppScore, appScore}) {
@@ -12,6 +12,11 @@ export default function Game({setAppScore, appScore}) {
     "Beat%20It",
     "Smells%20Like%20Teen%20Spirit",
     "Billie%20Jean",
+    "let%20it%20be",
+    "help",
+    "hey%20jude",
+    "come%20together",
+    "yesterday"
   ];
   const artistsArr = [
     "queen",
@@ -19,20 +24,25 @@ export default function Game({setAppScore, appScore}) {
     "Michael%20Jackson",
     "Nirvana",
     "Michael%20Jackson",
+    "the%20beatles",
+    "the%20beatles",
+    "the%20beatles",
+    "the%20beatles",
+    "the%20beatles",
   ];
   let random = Math.floor(songsArr.length * Math.random());
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState("");
   // const [score, setScore] = useState(0);
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(10);
   // const [timeOver, setTimeOver] = useState(false);
-
+const history = useHistory();
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
     if (counter === 0) {
-      // window.location.href = "/results";
-      return  <Redirect to='/results'  />      
-      // browserHistory.push("/results");
+      window.location.href = "/results";
+      // return  <Redirect to='/results'  />      
+      history.push("/results");
     }
   }, [counter]);
 
