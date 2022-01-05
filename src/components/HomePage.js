@@ -6,9 +6,9 @@ export default function HomePage() {
 
   return (
     <div className="homepage">
-      <h1>This is a Song Trivia Game</h1>
-      <h2>If you like listening to and enjoying songs, this quiz is for you.</h2>
-      <div className="link"><Link to={`/rules`}>click here to play </Link></div>
+      <h1>Trivia Game</h1>
+      <h2>If you like listening to music and enjoying lyrics, this quiz is for you!</h2>
+      <div className="link"><Link to={`/rules`} className="link">click here to start ></Link></div>
       </div>
   )
 }

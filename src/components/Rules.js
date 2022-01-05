@@ -1,22 +1,28 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import '../index.css';
+import "../index.css";
 
 const Rules = () => {
-  const handelBackBtn = () => {
-    window.history.back();
-  }
   return (
     <div className="rules">
-    <h1>Guess the song by lyrics rules</h1>
-      <ul>
-      <ol>The lyrics will show for 30 seconds. You'll need to submit the song name in the input by that time.</ol>
-      <ol>If you'll succeed you'll get 1 point.</ol>
+      <h1>Rules:</h1>
+      <ul className="ul">
+        <ol className="ol">
+          Your goal is to guess the song title from the lyrics.
+        </ol>
+        <ol className="ol">
+          The lyrics will appear for 30 seconds. You'll need to submit the song
+          name in the input by that time.
+        </ol>
+        <ol className="ol">If you'll succeed you'll get 1 point.</ol>
       </ul>
-      <Link to={`/game`}>click here to play </Link>
-      <button onClick={handelBackBtn}>Back</button>
+      <div className="link">
+        <Link to={`/game`} className="link">
+          click here to play >
+        </Link>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Rules
+export default Rules;

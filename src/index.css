@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "dpcomic";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,24 +9,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.navbar{ 
+  display: flex;
+  justify-content: space-around;
+  background-color: yellow;
+  height: 30px;
+  align-items: center;
+}
+.navbar-link{ 
+  text-decoration: none;
+  color: purple;
+}
 
 
-.rules, .homepage{
-  height: 100vh;
+.rules, .homepage, .game, .results{
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.7)), url("../src/img/pop-culture-trivia-pop-art-collage.jpeg");
+  /* opacity: 30%; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 94.6vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0.5em;
-  margin: 0.5em;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
-ul ol {
+.ol {
   list-style: circle;
+  color: rgb(123, 27, 123);
+  font-size: 2.2em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 3px;
+  align-items: center;
+  text-align: center;
+
+}
+h1, h2{ 
+  padding: 0.1em;
+  color: rgba(47, 247, 7, 0.886);
+  font-family: "dpcomic";
+  font-size: 5em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+h2 { 
+  padding: 1em;
+  color: purple;
+  font-size: 2em;
+
 }
 
-.link{
-  border: 1px solid black;
-  color: blue;
+.link, button{
+  border-radius: 20%;
+  padding: 0.2em;
+  background-color: rgb(0, 217, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  border: 1.5px solid black;
 }
 
-button {
+.countdown{
+  padding: 0.1em;
+  color: rgba(47, 247, 7, 0.886);
+  font-family: "dpcomic";
+  font-size: 3em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.lyrics{
+  background-color:rgba(255,255,255,0.7);
+  border: 1px solid purple;
+  padding: 0 2em 0 2em;
+  margin: 0 2em 0 2em;
+  letter-spacing: 2px;
 }

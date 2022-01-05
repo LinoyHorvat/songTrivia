@@ -1,8 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import Lyric from "./Lyric"
-// import Countdown from 'react-countdown';
-
 
 export default function Game() {
   const songsArr = ['we%20will%20rock%20you', 'frozen', 'Beat%20It','Smells%20Like%20Teen%20Spirit','Billie%20Jean']
@@ -11,7 +9,7 @@ export default function Game() {
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState('')
   const [score, setScore] = useState(0);
-  const [counter, setCounter] = React.useState(25);
+  const [counter, setCounter] = React.useState(15);
   const [timeOver, setTimeOver] = useState(false)
   
   React.useEffect(() => {
@@ -26,8 +24,8 @@ export default function Game() {
     console.log(songsArr[randomNum].split('%20').join(' '));
     randomChoice();
     setTimeOver(false)
-    // setCounter(25)
-    if(score === 3) window.history.back();
+    setCounter(15)
+    if(score >= 1) window.location.href = '/results';
   },[timeOver])
   
   const randomChoice = () => {
@@ -51,8 +49,8 @@ export default function Game() {
 
 
   return (
-    <div className = "game-container">
-    <div>Countdown: {counter}</div>
+    <div className = "game">
+    <div className = "countdown">Countdown: {counter}</div>
     <input placeholder="Guess The Song Name" type="text" value = {inputValue} onChange={event => handelInputChange(event.target.value)}/>
     <button className="score">score: {score}</button>
     {createLyrics()}
