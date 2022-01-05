@@ -74,7 +74,7 @@ export default function Game() {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       if (
-        inputValue == songsArr[randomNum].split("%20").join(" ").toLowerCase()
+        inputValue.toLowerCase() == songsArr[randomNum].split("%20").join(" ").toLowerCase()
       ) {
         setScore((score) => score + 1);
         localStorage.setItem("score", JSON.stringify(score + 1));
@@ -83,8 +83,9 @@ export default function Game() {
     }
   };
   const handelSubmit = () => {
+    console.log(inputValue.toLowerCase());
     if (
-      inputValue == songsArr[randomNum].split("%20").join(" ").toLowerCase()
+      inputValue.toLowerCase() == songsArr[randomNum].split("%20").join(" ").toLowerCase()
     ) {
       setScore((score) => score + 1);
       localStorage.setItem("score", JSON.stringify(score + 1));

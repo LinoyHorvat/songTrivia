@@ -32,11 +32,12 @@ const Lyric = ({songName, artistName}) => {
 
   return (
     <div className="lyrics">
-    <div>{songName.split('%20').join(' ').toLowerCase()}</div>
     {isLoading ? <div>loading...</div> : <div>{lyrics}</div>}
     </div>
   )
 }
+
+// <div>{songName.split('%20').join(' ').toLowerCase()}</div>
 
 
 export default Lyric
