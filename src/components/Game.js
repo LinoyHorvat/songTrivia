@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Lyric from "./Lyric";
 import { useHistory } from "react-router-dom";
-
+import "../index.css";
 
 export default function Game() {
   const songsArr = [
@@ -15,7 +15,7 @@ export default function Game() {
     "help",
     "hey%20jude",
     "come%20together",
-    "yesterday"
+    "yesterday",
   ];
   const artistsArr = [
     "queen",
@@ -34,12 +34,17 @@ export default function Game() {
   const [inputValue, setInputValue] = useState("");
   const [score, setScore] = useState(0);
   const [counter, setCounter] = useState(10);
-
   localStorage.setItem("score", JSON.stringify(score));
+  const history = useHistory();
+  const [style, setStyle] = useState({color: 'rgba(47, 247, 7, 0.886)'})
 
-const history = useHistory();
+
+
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    if (counter <= 5) {
+      setStyle({color: "red"}) 
+    }
     if (counter === 0) {
       // history.push("/results");
     }
@@ -70,7 +75,6 @@ const history = useHistory();
   };
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-
       if (
         inputValue == songsArr[randomNum].split("%20").join(" ").toLowerCase()
       ) {
@@ -83,9 +87,9 @@ const history = useHistory();
 
   return (
     <div className="game">
-      <div className="countdown">Countdown: {counter}</div>
+      <div className="countdown" style={style}>Countdown: {counter}</div>
       <input
-      className="input"
+        className="input"
         placeholder="Guess The Song Name"
         type="text"
         value={inputValue}
