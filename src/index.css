@@ -19,7 +19,7 @@ code {
 .navbar-link{ 
   text-decoration: none;
   color: purple;
-  font-size: 2.2em;
+  font-size: 1em;
 }
 
 
@@ -29,7 +29,7 @@ code {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 94vh;
+  height: 93vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,7 +39,7 @@ code {
 .ol {
   list-style: circle;
   color: rgb(123, 27, 123);
-  font-size: 3em;
+  font-size: 2em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   letter-spacing: 3px;
   align-items: center;
@@ -50,7 +50,7 @@ h1, h2{
   padding: 0.1em;
   color: rgba(47, 247, 7, 0.886);
   font-family: "dpcomic";
-  font-size: 7em;
+  font-size: 5em;
   letter-spacing: 7px;
   text-transform: uppercase;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -59,7 +59,7 @@ h1, h2{
 h2 { 
   padding: 1em;
   color: purple;
-  font-size: 3em;
+  font-size: 2em;
 
 }
 
