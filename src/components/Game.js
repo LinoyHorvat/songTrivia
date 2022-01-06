@@ -47,8 +47,7 @@ export default function Game() {
     "Britney%20Spears",
     "billy%20joel"
   ];
-  // let random = Math.floor(songsArr.length * Math.random());
-  let random = 18;
+  let random = Math.floor(songsArr.length * Math.random());
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState("");
   const [score, setScore] = useState(0);
