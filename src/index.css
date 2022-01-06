@@ -34,18 +34,11 @@ code {
   align-items: center;
   text-align: center;
 }
-ul {
-  /* display: flex;
-  flex-direction: column;
-  padding: 10px; */
-}
 .ol {
   color: rgb(123, 27, 123);
   font-size: 3.2em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   letter-spacing: 3px;
-  /* align-items: right; */
-  /* text-align: center; */
 }
 h1, h2{ 
   padding: 0.1em;
@@ -79,7 +72,6 @@ h2 {
 
 .countdown{
   padding: 0.1em;
-  /* color: rgba(47, 247, 7, 0.886); */
   font-size: 3em;
   letter-spacing: 1px;
   text-transform: uppercase;

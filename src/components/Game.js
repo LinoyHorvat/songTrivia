@@ -16,6 +16,15 @@ export default function Game() {
     "hey%20jude",
     "come%20together",
     "yesterday",
+    "i%20want%20to%20break%20free",
+    "bohemian%20rhapsody",
+    "crazy%20little%20thing%20called%20love",
+    "Like%20a%20Prayer",
+    "Every%20Breath%20You%20Take",
+    "Eye%20of%20the%20Tiger",
+    "Africa",
+    "Sometimes",
+    "uptown%20girl"
   ];
   const artistsArr = [
     "queen",
@@ -28,13 +37,22 @@ export default function Game() {
     "the%20beatles",
     "the%20beatles",
     "the%20beatles",
+    "queen",
+    "queen",
+    "queen",
+    "Madonna",
+    "Police",
+    "Survivor",
+    "Toto",
+    "Britney%20Spears",
+    "billy%20joel"
   ];
-  let random = Math.floor(songsArr.length * Math.random());
-  // let random = 10;
+  // let random = Math.floor(songsArr.length * Math.random());
+  let random = 18;
   const [randomNum, setRandomNum] = useState(random);
   const [inputValue, setInputValue] = useState("");
   const [score, setScore] = useState(0);
-  const [counter, setCounter] = useState(60);
+  const [counter, setCounter] = useState(30);
   localStorage.setItem("score", JSON.stringify(score));
   const history = useHistory();
   const [style, setStyle] = useState({ color: "rgba(47, 247, 7, 0.886)" });
